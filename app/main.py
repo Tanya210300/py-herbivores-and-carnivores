@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class Animal:
     alive = []
 
@@ -23,4 +26,6 @@ class Carnivore(Animal):
                 if other.health > 0:
                     other.health -= 50
                     if other.health <= 0:
-                        Animal.alive.remove(other)
+                        if other in Animal.alive:
+                            Animal.alive.remove(other)
+
