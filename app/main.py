@@ -28,4 +28,3 @@ class Carnivore(Animal):
                     if other.health <= 0:
                         if other in Animal.alive:
                             Animal.alive.remove(other)
-
